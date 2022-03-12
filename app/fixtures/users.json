@@ -1,0 +1,20 @@
+[
+    {
+        "model": "app.address",
+        "fields": {
+            "number": "47",
+            "street": "Magnolia Court",
+            "city": "Melbourne",
+            "state": "VIC"
+        },
+        "pk": 1
+    },
+    {
+        "model": "app.person",
+        "fields": {
+            "email": "tlscelsi@gmail.com",
+            "name": "Thomas Scelsi",
+            "address": 1
+        }
+    }
+]
