@@ -56,7 +56,7 @@ You're ready to go!
 
 The easiest way to run the API for fun is to use Django's built in development server and the Graphene UI.
 
-**NOTE:** This API is not meant to be used in a production environment.
+**NOTE:** THIS API IS NOT MEANT TO BE USED IN A PRODUCTION ENVIRONMENT. DO NOT STORE ANY CLASSIFIED DATA.
 
 To run the development server:
 
