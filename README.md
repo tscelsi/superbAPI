@@ -3,6 +3,15 @@
 *Welcome to SuperbAPI*, 
 a super simple API implemented using Django and GraphQL.
 
+- [Installation](#installation)
+    - [1. Create virtual python environment](#1-create-virtual-python-environment)
+    - [2. Activate virtual environment](#2-activate-virtual-environment)
+    - [3. Installing dependencies](#3-installing-dependencies)
+    - [4. Populating Database](#4-populating-database)
+- [Running the API](#running-the-api)
+- [Testing](#testing)
+- [Contact](#contact)
+
 # Installation
 
 This project was built using:
