@@ -20,16 +20,22 @@ Package | Version
 :-- | :--
 Python | 3.10.0
 Django | 4.0.3
-Graphene-Django | 2.15.0
+Graphene-Django | 3.0.0b7*
 
-**NOTE:** A bug was encountered due to incompatibilities between Django v4.0 and the graphene_django packages. To fix, references to `force_text` in graphene_django/utils/utils.py source code must be changed to `force_str`. See: [this](https://github.com/graphql-python/graphene-django/issues/1284) link for more details and other solutions.
+*this is a year-old beta release of graphene-django, their latest production build breaks with Django v4. Hopefully this is fixed in further releases. For more info see [here](https://github.com/graphql-python/graphene-django/issues/1284).
 
+If you're on a *nix system, you can use `build.sh` (you may need to assign execute permissions) to fast-track the following installation steps. Read on if you **LOVE** manual installations!
 
-Navigate to the root directory of this repository after cloning.
+First, we need to be  in the root directory of this repository after cloning. i.e.
+
+    $ cd superbAPI
 
 ### 1. Create virtual python environment
     /* in superbAPI root directory */
     $ python -m venv <environment_name>
+
+**TIP:** If you're making changes to the repo, it's handy to add your `<environment_name>` directory to the .gitignore file so that it isn't included when committing to git. The current .gitignore file has `env` listed, which is what I call my virtual environments. 
+
 ### 2. Activate virtual environment
     $ source <environment_name>/bin/activate    # linux/macOS
     $ ./<environment_name>/Scripts/activate     # windows
