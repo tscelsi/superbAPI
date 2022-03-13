@@ -3,9 +3,7 @@
 *Welcome to SuperbAPI*, 
 a super simple API implemented using Django and GraphQL.
 
-
-
-## Installation
+# Installation
 
 This project was built using:
 
@@ -29,13 +27,38 @@ Navigate to the root directory of this repository after cloning.
 ### 3. Installing dependencies
     $ pip install -r requirements.txt
 ### 4. Populating Database
-We use fixtures to populate dummy data into a basic sqlite3 database. Django provides an easy API to load data into their database [here](https://docs.djangoproject.com/en/4.0/ref/django-admin/#loaddata).
+We use fixtures to populate dummy data into a basic sqlite3 database. Django provides an easy API to load data into their database [here](https://docs.djangoproject.com/en/4.0/ref/django-admin/#loaddata). Before we do this though, we have to ensure the correct tables are created in the database.
 
-    $ python manage.py loaddata users
+    1. $ python manage.py makemigrations
 
-1. create virtual environment
-2. install dependencies: pip install -r requirements.txt
-3. update database with fixtures: python manage.py loaddata users
-4. python manage.py makemigrations
-5. python manage.py migrate
-6. python manage.py runserver
+    2. $ python manage.py migrate
+
+    3. $ python manage.py loaddata users
+
+You're ready to go!
+
+# Running the API
+
+The easiest way to run the API for fun is to use Django's built in development server and the Graphene UI.
+
+**NOTE:** This API is not meant to be used in a production environment.
+
+To run the development server:
+
+    $ python manage.py runserver
+
+And to use the Graphene UI for curating GraphQL queries, navigate to [http://localhost:8000/graphql](http://localhost:8000/graphql).
+
+Have fun!
+
+# Testing
+
+To run the suite of tests for the API simply run the following:
+
+    $ python manage.py test app
+
+# Contact
+
+If you have any questions or contributions please reach out to me at:
+
+`tlscelsi@gmail.com`
