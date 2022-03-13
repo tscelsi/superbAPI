@@ -4,7 +4,7 @@ Author: Thomas Scelsi
 Email: tlscelsi@gmail.com
 
 This file covers the testing of graphql query endpoints. 
-It is inspired somewhat from the graphene test suite found at:
+It is inspired somewhat from the graphene-django test suite found at:
 https://github.com/graphql-python/graphene-django/blob/master/graphene_django/tests/test_query.py
 
 """

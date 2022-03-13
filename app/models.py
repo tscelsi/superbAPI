@@ -1,3 +1,9 @@
+"""
+
+In this file we declare the schema for our sqlite database. These models can then be converted into GraphQL fields (see schema.py).
+
+"""
+
 from django.db import models
 
 class Address(models.Model):
@@ -6,7 +12,8 @@ class Address(models.Model):
     # max length constraints in the DB.
     street = models.TextField()
     city = models.TextField()
-    # let's make it so that we're only dealing with Australian states
+    # let's make it so that we're only dealing with Australian states. the 'choices' field automatically
+    # gets converted to a GraphQL enum type.
     state = models.CharField(
         max_length=3,
         choices=[
