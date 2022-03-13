@@ -18,6 +18,9 @@ class Address(models.Model):
             ("NT", "Northern Territory"), 
             ("SA", "South Australia")
         ])
+    
+    def __str__(self):
+        return f"{self.number} {self.street}, {self.city}, {self.state}."
 
 
 class Person(models.Model):
@@ -26,3 +29,6 @@ class Person(models.Model):
     # here we link an address to a person. If we remove the address, then we set the address of the 
     # person to null.
     address = models.ForeignKey(Address, related_name="person", on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.email
